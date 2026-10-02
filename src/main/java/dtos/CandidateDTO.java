@@ -1,32 +1,29 @@
-package entities;
-import jakarta.persistence.*;
-@Entity
-@Table(name = "candidates")
-public class Candidate
-{
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Column(nullable = false)
-    private String name;
-    @Column(nullable = false, unique = true)
-    private String mail;
-    @Column(nullable = false)
-    private String phoneNo;
-    @Column(nullable = false)
-    private String resumeUrl;
+package dtos;
 
-    public Candidate(){}
-    public Candidate(String name, String mail, String phoneNo, String resumeUrl)
+public class CandidateDTO
+{
+    private Long id;
+    private String name;
+    private String mail;
+    private String phoneNo;
+    private String resumeURL;
+
+    public CandidateDTO(){}
+    public CandidateDTO(Long id, String name, String mail, String phoneNo, String resumeURL)
     {
+        this.id = id;
         this.name = name;
         this.mail = mail;
         this.phoneNo = phoneNo;
-        this.resumeUrl = resumeUrl;
+        this.resumeURL = resumeURL;
     }
 
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -53,11 +50,12 @@ public class Candidate
         this.phoneNo = phoneNo;
     }
 
-    public String getResumeUrl() {
-        return resumeUrl;
+    public String getResumeURL() {
+        return resumeURL;
     }
 
-    public void setResumeUrl(String resumeUrl) {
-        this.resumeUrl = resumeUrl;
+    public void setResumeURL(String resumeURL) {
+        this.resumeURL = resumeURL;
     }
 }
+
