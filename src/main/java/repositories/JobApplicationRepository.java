@@ -1,0 +1,6 @@
+package repositories;
+import entities.JobApplication;
+import org.springframework.data.jpa.repository.JpaRepository;
+public interface JobApplicationRepository extends JpaRepository<JobApplication, Long>
+{
+}
