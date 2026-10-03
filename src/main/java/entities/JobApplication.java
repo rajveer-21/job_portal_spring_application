@@ -22,8 +22,8 @@ public class JobApplication
     private String status;
     private LocalDateTime application_time;
 
-    JobApplication(){}
-    JobApplication(Candidate candidate, Job job, String status, LocalDateTime application_time)
+    public JobApplication(){}
+    public JobApplication(Candidate candidate, Job job, String status, LocalDateTime application_time)
     {
         this.candidate = candidate;
         this.job = job;

@@ -22,8 +22,8 @@ public class Job
     @JoinColumn(name = "company_id", nullable = false)
     private Company company;
 
-    Job(){}
-    Job(String title, String description, String location, String jobtype, Double salary, LocalDateTime postedAt, Company company)
+    public Job(){}
+    public Job(String title, String description, String location, String jobtype, Double salary, LocalDateTime postedAt, Company company)
     {
         this.title = title;
         this.description = description;

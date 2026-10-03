@@ -14,8 +14,8 @@ public class Company
     private String description;
     private String location;
 
-    Company(){}
-    Company(String name, String websiteUrl, String description, String location)
+    public Company(){}
+    public Company(String name, String websiteUrl, String description, String location)
     {
         this.name = name;
         this.websiteUrl = websiteUrl;
